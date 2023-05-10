@@ -1,12 +1,6 @@
-# table = [
-#     ["X", "", ""],
-#     ["", "", ""],
-#     [
-#         "",
-#         "",
-#         "",
-#     ],
-# ]
+table = [["", "", ""],
+         ["", "", ""],
+         ["","","",]]
 
 
 def cell_occupancy(k1, k2):
@@ -27,3 +21,9 @@ def cell_occupancy(k1, k2):
 
 
 # head()
+
+def players_go():
+        gamer_1 = input("Введите координаты ячейки (через запятую): ")
+        gamer_1 = gamer_1.split(",")
+        
+players_go()
