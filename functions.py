@@ -12,8 +12,8 @@ def cell_occupancy(k1, k2):
 def coor_input():
     while True:
         try:
-            player_1 = input("Введите координаты ячейки (через двоеточие): ")
-            coor_ls = list(map(lambda x: x.strip(), player_1.split(":")))
+            coordinates = input("Введите координаты ячейки (через двоеточие): ")
+            coor_ls = list(map(lambda x: x.strip(), coordinates.split(":")))
             assert len(coor_ls) == 2, "Введите только два значения"
         except AssertionError as msg:
             print(msg)
@@ -27,3 +27,8 @@ def coor_input():
                 print(msg)
             else:
                 return x, y
+            
+def is_correct_coor(coordinates):
+    x, y = coordinates
+    if 0 < x < 4 and 0 < y < 4: return True
+    else: return False
